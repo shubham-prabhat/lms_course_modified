@@ -60,10 +60,8 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": [
-#         "lms_course_modified.overrides.utils.get_lesson_urls",
-#         "lms_course_modified.overrides.utils.show_start_learing_ctas"
-#     	]
+# 	"methods": "lms_course_modified.utils.jinja_methods",
+# 	"filters": "lms_course_modified.utils.jinja_filters"
 # }
 
 # Installation
@@ -161,9 +159,10 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "lms_course_modified.event.get_events"
-# }
+override_whitelisted_methods = {
+	"lms.lms.utils.get_lesson_url": "lms_course_modified.overrides.utils.get_lesson_url",
+	"lms.lms.utils.show_start_learing_cta": "lms_course_modified.overrides.utils.show_start_learing_cta"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
