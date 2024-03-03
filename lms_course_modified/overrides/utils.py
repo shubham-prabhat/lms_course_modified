@@ -1,6 +1,6 @@
 import frappe
 
-def get_lesson_url(course, lesson_number):
+def get_lesson_urls(course, lesson_number):
 	if not lesson_number:
 		return
 	else:
@@ -14,7 +14,7 @@ def get_lesson_url(course, lesson_number):
 
 
 
-def show_start_learing_cta(course, membership):
+def show_start_learing_ctas(course, membership):
 	
 	print("##################### LOG ################")
 	# if not membership:

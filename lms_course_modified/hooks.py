@@ -59,10 +59,12 @@ app_license = "mit"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "lms_course_modified.utils.jinja_methods",
-# 	"filters": "lms_course_modified.utils.jinja_filters"
-# }
+jinja = {
+	"methods": [
+        "lms_course_modified.lms_course_modified.overrides.utils.get_lesson_urls",
+        "lms_course_modified.lms_course_modified.overrides.utils.show_start_learing_ctas",
+    	]
+}
 
 # Installation
 # ------------
