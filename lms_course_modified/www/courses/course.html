@@ -78,7 +78,7 @@
 
                                     {% if membership or lesson.include_in_preview or is_instructor or has_course_moderator_role() %}
                                     <a class="lesson-links"
-                                    href="{{ get_lesson_urls(course.name, lesson.number) }}{% if classname %}?class={{ classname }}{% endif %}{{course.query_parameter}}"
+                                    href="{{ get_lesson_url(course.name, lesson.number) }}{% if classname %}?class={{ classname }}{% endif %}{{course.query_parameter}}"
                                     {% if is_instructor and not lesson.include_in_preview %}
                                     title="{{ _('This lesson is not available for preview. As you are the Instructor of the course only you can see it.') }}"
                                     {% endif %}>
@@ -353,7 +353,7 @@
             {{ _("Buy This Course") }}
         </a>
 
-        {% elif show_start_learing_ctas(course, membership) %}
+        {% elif show_start_learing_cta(course, membership) %}
         <div class="btn btn-primary wide-button enroll-in-course" data-course="{{ course.name | urlencode }}">
             {{ _("Start Learning") }}
         </div>
