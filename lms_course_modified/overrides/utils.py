@@ -1,6 +1,8 @@
+from lms.lms.utils import get_lesson_url as original_get_lesson_url
+from lms.lms.utils import show_start_learing_cta as original_show_start_learing_cta
 import frappe
 
-def get_lesson_urls(course, lesson_number):
+def custom_get_lesson_url(course, lesson_number):
 	if not lesson_number:
 		return
 	else:
@@ -14,7 +16,7 @@ def get_lesson_urls(course, lesson_number):
 
 
 
-def show_start_learing_ctas(course, membership):
+def custom_show_start_learing_cta(course, membership):
 	
 	print("##################### LOG ################")
 	# if not membership:
