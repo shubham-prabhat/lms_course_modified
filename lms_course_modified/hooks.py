@@ -1,3 +1,9 @@
+# import lms.lms.utils
+# import lms_course_modified.overrides.utils as myuntils
+
+# lms.lms.utils.get_lesson_url = myuntils.get_lesson_url
+# lms.lms.utils.show_start_learing_cta = myuntils.show_start_learing_cta
+
 app_name = "lms_course_modified"
 app_title = "LMS Course Modified"
 app_publisher = "By Abraham Kalungi"
